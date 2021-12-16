@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lueurtech</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/"><img src="logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="bar.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <h1>Contact Us</h1>
+        <form class="cu">
+            <div class="half left cu">
+                <input type="text" id="input-name" placeholder="Name">
+                <input type="email" id="input-email" placeholder="Email address">
+                <input type="text" id="input-subject" placeholder="Subject">
+            </div>
+            <div class="half right cu">
+                <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="Submit" id="input-submit">
+
+        </form>
+
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <h3>Social</h3>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Linkedin</li>
+        </div>
+        <div class="footer-col">
+            <a href=""><h3>Call Us</h3></a>
+            <a href=""><li>Email</li></a>
+            <a href=""><li>Phone</li></a>
+            <a href=""><li>Fax </li></a>
+        </div>
+        <div class="footer-col">
+            <h3>Investors</h3>
+            <li>Financial Results</li>
+            <li>Capex</li>
+            <li>Board Members</li>
+        </div>
+        <div class="footer-col">
+            <h3>NewsLetter</h3>
+            <p>Sign Up for our exclusive articles</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169 2021 All rights reserved.Made by Nitish Bhattacharjee </p>
+        </div>
+    </footer>
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+</body>
+
+</html>

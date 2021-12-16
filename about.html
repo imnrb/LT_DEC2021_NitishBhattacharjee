@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lueurtech</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/"><img src="logo.png" alt=""></a>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="bar.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <h2>About Us</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis qui, assumenda obcaecati reiciendis,
+            at unde ullam quibusdam eligendi officia fuga porro consequatur fugiat, consectetur enim? Vitae veritatis
+            labore consequuntur nemo! Tempora voluptates mollitia quas?
+        </p>
+    </section>
+
+    <section id="office">
+        <h1 id="office-head">Our Office</h1>
+        <div class="container">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="office/office1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="office/office2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="office/office3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="office/office4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="office/office5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="office/office6.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="office/office1.jpg" style="width:100%; height:100%"
+                        onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="office/office2.jpg" style="width:100%; height:100%"
+                        onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="office/office3.jpg" style="width:100%; height:inherit"
+                        onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="office/office4.jpg" style="width:100%; height:inherit"
+                        onclick="currentSlide(4)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="office/office5.jpg" style="width:100%; height:inherit"
+                        onclick="currentSlide(5)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="office/office6.jpg" style="width:100%; height:inherit"
+                        onclick="currentSlide(6)">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-col">
+            <h3>Social</h3>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Linkedin</li>
+        </div>
+        <div class="footer-col">
+            <a href=""><h3>Call Us</h3></a>
+            <a href=""><li>Email</li></a>
+            <a href=""><li>Phone</li></a>
+            <a href=""><li>Fax </li></a>
+        </div>
+        <div class="footer-col">
+            <h3>Investors</h3>
+            <li>Financial Results</li>
+            <li>Capex</li>
+            <li>Board Members</li>
+        </div>
+        <div class="footer-col">
+            <h3>NewsLetter</h3>
+            <p>Sign Up for our exclusive articles</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169 2021 All rights reserved.Made by Nitish Bhattacharjee </p>
+        </div>
+    </footer>
+
+
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+
+</html>
